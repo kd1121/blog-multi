@@ -1,0 +1,39 @@
+.nav-div{
+
+    display: flex;
+    justify-content: flex-start;
+    background-color: #252525;
+    background-blend-mode: color-dodge;
+}
+
+
+
+
+
+.link-route{ 
+    padding: 2%;
+    text-decoration: none;
+    color: darkslategrey;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.link-route-head{
+    padding: 2%;
+    text-decoration: none;
+    color: aliceblue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-decoration: overline;
+    text-decoration-color: #252525;
+
+
+
+}
+
+a:hover{
+    color: aliceblue;    
+}
+
