@@ -2,6 +2,7 @@ import React from 'react'
 import BlogItem from '../BlogItem/BlogItem'
 import Navbar from '../Home/Navbar'
 import { useEffect, useState } from 'react'
+import "../Sevices/Blogs.css"
 // import { useParams } from 'react-router-dom'
 import axios
  from 'axios'
@@ -29,10 +30,10 @@ const Blogs = () => {
 
 
   return (
-    <div>
+    <div >
       <Navbar />
-      <h1>Blogs</h1>
-      <div>
+      <h1 className='hdr-blog'>Blogs</h1>
+      <div className='blog-list'>
       {blogs.map((blog) => (
       <BlogItem blog={blog} key={blog.id} />
       ))}

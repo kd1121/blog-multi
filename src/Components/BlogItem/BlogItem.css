@@ -1,0 +1,13 @@
+.arrow-icn{
+    color: black;
+}
+
+.arrow-icn:hover{
+    color: #252525;
+}
+
+.item-main{
+   max-width: 740px;
+   display: grid;
+   
+}
