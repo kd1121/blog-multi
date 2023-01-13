@@ -3,11 +3,12 @@
 *::after,
 *::before {
   box-sizing: border-box;
-  margin: 0;
 }
 
 body {
     font-family: 'Montserrat', sans-serif;  
+    color: rgb(110, 110, 110);
+    background-color: rgb(226, 226, 226);
 }
 
 .container {

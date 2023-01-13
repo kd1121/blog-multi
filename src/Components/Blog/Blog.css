@@ -1,0 +1,36 @@
+.go-back{
+    color: black;
+    
+}
+
+.go-back:hover{
+    color: #252525;
+}
+
+.blog-title{
+    color: #151515;
+    border-left: solid 10px #252525;
+    padding: 0 0 0 1rem;
+}
+
+.blog-main{
+    border: solid aliceblue;
+    border-radius: 2rem;
+    padding: 2rem;
+    background-color: aliceblue;
+    box-shadow: 0 3px 5px 3px #707070;
+}
+
+.blog-des{
+    padding: 1rem 0 5rem 0;
+}
+
+.sep-line{
+    border-top:solid 3px #252525;
+    padding-top: 2rem;
+    margin: 0;
+}
+
+.dt-line{
+    margin: 10px 0 0 0 ;
+}

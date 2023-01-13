@@ -5,15 +5,15 @@ import "../BlogItem/BlogItem.css"
 import { FaAngleRight } from "react-icons/fa";
 
 
-const BlogItem = ({blog:{id,title,description,createdDate,writerName}}) => {
+const BlogItem = ({blog:{id,title,description,writerName}}) => {
   return (
     <>
     <div className='item-main'>
         <h3>{title}</h3>
         <p>{description}</p>
-        <p>{writerName}</p>
+        <p>By {writerName}</p>
         <div className='arrow-svg'>
-            <Link to={`/blogs/${id}`}><FaAngleRight className='arrow-icn' /></Link>
+            <Link className='view-arw' to={`/blogs/${id}`}><FaAngleRight size='25pt' className='arrow-icn' /></Link>
         </div>
     </div>
     </>

@@ -3,10 +3,14 @@
     display: flex;
     justify-content: flex-start;
     background-color: #252525;
-    background-blend-mode: color-dodge;
+    box-shadow: 0 2px 5px #555;
+    border-radius: 5px;
+
 }
 
-
+.main-div{
+    /* border: #151515; */
+}
 
 
 

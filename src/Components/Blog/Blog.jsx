@@ -2,7 +2,10 @@ import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 // import { blogData } from '../Sevices/blogData';
 import axios from 'axios';
-import Blogs from '../Sevices/Blogs';
+// import Blogs from '../Sevices/Blogs';
+import "../Blog/Blog.css"
+// import Navbar from '../Home/Navbar';
+import { FaAngleLeft } from "react-icons/fa";
 
 const Blog = () => {
     
@@ -32,16 +35,22 @@ const Blog = () => {
     
   return (
     <>
-    <div>
-        <Link to='/blogs'>Go Back</Link>
+    <div className='blog-main'>
+        <Link className='go-back' to='/blogs'>
+
+          <FaAngleLeft size='25pt' />
+          </Link>
         {blogs.map((blog) => {
           return blog.id === id ? (
-            <div key={blog.id}>
-              <h1>{blog.title}</h1>
-              <h3>{blog.description}</h3>
-              <h6>Created {blog.createdDate} By {blog.writerName}</h6>
+            <div  key={blog.id}>
+              {/* <h1><span>BLOGER</span></h1> */}
+              <h1 className='blog-title'>{blog.title}</h1>
+              {/* <h3>Description</h3> */}
+              <h3 className='blog-des'>{blog.description}</h3>
+              <h6 className='sep-line'>By {blog.writerName}</h6>
+              <h6 className='dt-line'>Created {blog.createdDate.slice(0,10)}</h6>
             </div>
-          ) : (<div></div>)
+          ) : (null)
           // blog.
         })}
               
