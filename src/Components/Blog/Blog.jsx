@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 import axios from 'axios';
 import { FaAngleLeft } from "react-icons/fa";
 import "../Blog/Blog.css"
+import Loading from '../Loading/Loading';
 
 // import Blogs from '../Sevices/Blogs';
 // import { blogData } from '../Sevices/blogData';
@@ -12,19 +13,36 @@ const Blog = () => {
     
     const [blogs, setBlog] = useState([])
 
+    const [showBuffer, setShowBuffer] = useState(false);
+
     const {id} = useParams();
 
     const apiEndpoint = "https://63ad0ea934c46cd7ae8f6df2.mockapi.io/blog/"
 
     useEffect(() => {
       // let blog=blogData.find(blog => blog.id === parseInt(id));
+      setShowBuffer(true);
+      setTimeout(() => {
+        const getBlog = async () => {
+          const response = await axios.get(apiEndpoint + id);
+          setBlog(response.data);
+          // console.log(response.data)
+        }
+        getBlog();
 
-      const getBlog = async () => {
-        const response = await axios.get(apiEndpoint);
-        setBlog(response.data);
-        // console.log(response.data)
-      }
-      getBlog();
+        setShowBuffer(false)
+      }, 2000)
+
+
+      
+
+      
+      // const getBlog = async () => {
+      //   const response = await axios.get(apiEndpoint + id);
+      //   setBlog(response.data);
+      //   // console.log(response.data)
+      // }
+      // getBlog();
 
       // if (blog) {
       //   setBlog(blog)        
@@ -53,53 +71,54 @@ const Blog = () => {
     // }, [id])
 
 
-    // return(
-    //   <>
-    //   <div className='blog-main'>
-    //     <Link className='go-back' to='/blogs'><FaAngleLeft size='25pt' /></Link>
-        
-    //         <div>
-    //           {/* <h1><span>BLOGER</span></h1> */}
-    //           <h1 className='blog-title'>{blogs.title}</h1>
-    //           {/* <h3>Description</h3> */}
-    //           <h3 className='blog-des'>{blogs.description}</h3>
-    //           <h6 className='sep-line'>By {blogs.writerName}</h6>
-    //           <h6 className='dt-line'>Created {blogs.createdDate.slice(0,10)}</h6>
-    //         </div>
-       
-              
-    // </div>
-    //   </>
-    // )
+    return (
+      <>
+        <div className="blog-main">
+          <Link className="go-back" to="/blogs">
+            <FaAngleLeft size="25pt" />
+          </Link>
+          
+          {showBuffer && <Loading />}
+          <div>
+            {/* <h1><span>BLOGER</span></h1> */}
+            <h1 className="blog-title">{blogs.title}</h1>
+            {/* <h3>Description</h3> */}
+            <h3 className="blog-des">{blogs.description}</h3>
+            <h6 className="sep-line">By {blogs.writerName}</h6>
+            <h6 className="dt-line">Created {blogs.createdDate}</h6>
+          </div>
+        </div>
+      </>
+    );
     
     //==============================================================================================================================
 
 
     
-  return (
-    <>
-    <div className='blog-main'>
-        <Link className='go-back' to='/blogs'>
+  // return (
+  //   <>
+  //   <div className='blog-main'>
+  //       <Link className='go-back' to='/blogs'>
 
-          <FaAngleLeft size='25pt' />
-          </Link>
-        {blogs.map((blog) => {
-          return blog.id === id ? (
-            <div  key={blog.id}>
-              {/* <h1><span>BLOGER</span></h1> */}
-              <h1 className='blog-title'>{blog.title}</h1>
-              {/* <h3>Description</h3> */}
-              <h3 className='blog-des'>{blog.description}</h3>
-              <h6 className='sep-line'>By {blog.writerName}</h6>
-              <h6 className='dt-line'>Created {blog.createdDate.slice(0,10)}</h6>
-            </div>
-          ) : (null)
-          // blog.
-        })}
+  //         <FaAngleLeft size='25pt' />
+  //         </Link>
+  //       {blogs.map((blog) => {
+  //         return blog.id === id ? (
+  //           <div  key={blog.id}>
+  //             {/* <h1><span>BLOGER</span></h1> */}
+  //             <h1 className='blog-title'>{blog.title}</h1>
+  //             {/* <h3>Description</h3> */}
+  //             <h3 className='blog-des'>{blog.description}</h3>
+  //             <h6 className='sep-line'>By {blog.writerName}</h6>
+  //             <h6 className='dt-line'>Created {blog.createdDate.slice(0,10)}</h6>
+  //           </div>
+  //         ) : (null)
+  //         // blog.
+  //       })}
               
-    </div>
-    </>
-  )
+  //   </div>
+  //   </>
+  // )
 }
 
 export default Blog;
