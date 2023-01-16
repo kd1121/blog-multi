@@ -85,7 +85,7 @@ const Blog = () => {
             {/* <h3>Description</h3> */}
             <h3 className="blog-des">{blogs.description}</h3>
             <h6 className="sep-line">By {blogs.writerName}</h6>
-            <h6 className="dt-line">Created {blogs.createdDate}</h6>
+            <h6 className="dt-line">Created {blogs.createdDate.slice(0,10)}</h6>
           </div>
         </div>
       </>
