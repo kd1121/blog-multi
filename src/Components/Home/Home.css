@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Rubik+Mono+One&display=swap');
+
+
+.home-main{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 5rem;
+    padding-top: 2rem;
+    width: auto;
+    height: ;
+}
+
+#comma{
+    color: #8f6969;
+    font-weight:bolder;
+    font-family: 'Rubik Mono One', sans-serif;
+}
+
+#main-txt{
+    color: #252525;
+    font-weight: bolder;
+}
