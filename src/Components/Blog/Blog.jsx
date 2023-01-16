@@ -13,7 +13,7 @@ const Blog = () => {
     
     const [blogs, setBlog] = useState([])
 
-    const [showBuffer, setShowBuffer] = useState(false);
+    const [showBuffer, setShowBuffer] = useState(true);
 
     const {id} = useParams();
 
