@@ -33,7 +33,7 @@ const Blogs = () => {
   return (
     <div >
       <Navbar />
-      <h1 className='hdr-blog'>Blogs</h1>
+      <h1 className='hdr-blog'><span id='comma'>"</span><span id='main-txt'>Blogs</span><span id='comma'>"</span></h1>
       <div className='blog-list'>
       {blogs.map((blog) => (
       <BlogItem blog={blog} key={blog.id} />

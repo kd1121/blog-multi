@@ -13,7 +13,7 @@ const Home = () => {
       <div className='home-main'>
       <div className='home-head'>
         Hey! 
-        <div className='spaning'>Welcome to <span id='comma'>"</span><span id='main-txt'>Bloger</span><span id='comma'>"</span></div>
+        <div className='spaning'>Welcome to <span id='comma'>"</span><span id='main-txt'>Blogger</span><span id='comma'>"</span></div>
       </div>
     </div>
     <Footer />

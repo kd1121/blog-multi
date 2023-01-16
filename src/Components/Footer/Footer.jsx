@@ -11,7 +11,7 @@ const Footer = () => {
       B
       </div>
       <div>
-      <span className='ftr-logo'>Blogger</span> Copyright © {date.getFullYear()} Bloger Inc. All rights reserved.
+      <span className='ftr-logo'>Blogger</span> Copyright © {date.getFullYear()} Blogger Inc. All rights reserved.
       </div>
       
     </div>

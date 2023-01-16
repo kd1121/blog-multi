@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Rubik+Mono+One&display=swap');
 
 
 .hdr-blog{
@@ -6,6 +7,17 @@
     border-left: solid 15px #151515;
     /* border-radius: 5px; */
     
+}
+#comma{
+  color: #8f6969;
+  font-weight:bolder;
+  font-family: 'Rubik Mono One', sans-serif;
+}
+
+#main-txt{
+  color: #252525;
+  font-weight: bolder;
+
 }
 
 .blog-list {
