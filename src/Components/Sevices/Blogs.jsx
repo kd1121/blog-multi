@@ -6,6 +6,7 @@ import "../Sevices/Blogs.css"
 // import { useParams } from 'react-router-dom'
 import axios
  from 'axios'
+import Footer from '../Footer/Footer'
 
 
 const Blogs = () => {
@@ -39,7 +40,9 @@ const Blogs = () => {
       ))}
       
     </div>
-      </div>
+    <Footer />
+    </div>
+    
       
   )
 }

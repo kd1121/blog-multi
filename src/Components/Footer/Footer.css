@@ -1,0 +1,39 @@
+.ftr-main{
+    border: solid #252525;
+    width: auto;
+    background-color: #252525;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin-top: 25px;
+}
+
+.ftr-child{
+    color: #ccc;
+    font-size: 1.8rem;
+    font-weight: bolder;
+    height: 41px;
+    width: 40px;
+    border: solid #101010 ;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 0px 50px 1px rgb(85, 85, 85);
+    background-color: #101010;
+
+}
+
+.ftr-logo{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: aliceblue;
+    font-weight: bolder;
+    font-size: 2rem;
+    padding: 0 1.5rem 0 1.5rem;
+}
+
+.logo-bloger{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 5rem;
+}
